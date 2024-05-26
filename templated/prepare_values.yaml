@@ -1,0 +1,10 @@
+from:
+  repository: premiumactions/testfiles
+  defaultValuesFile: templated/values.yaml
+targets:
+  - src: .github/workflows/templates/build.yaml
+    dest: .github/workflows/build.yaml
+values:
+  name: Something
+  extraEnvs:
+    myValue: ${{secrets.MY_VALUE}}
